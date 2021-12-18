@@ -12,26 +12,64 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="header__titulo">Hola soy Isaac Fierro</h1>
+        <h1 class="header__titulo">Isaac Fierro</h1>
     </header>
-    <main class="main">
-
+    <main class="main seccion" id="sobre-mi">
+        <h2>Sobre mi</h2>
+        <p>Hola soy Isaac Fierro, un desarrollador web jr con pasion por el Frontend✨. Me encanta crear soluciones visuales, interactivas y sobre todo creativas.</p>
+        <p>Me considero un eterno auto didacta, me encanta aprender nuevas cosas, entender como funcionan, y desarrollar soluciones nuevas con ellas</p>
     </main>
+    <section class="habilidades seccion" id="habilidades">
+        <h2 class="habilidades__titulo">Habilidades</h2>
+        <p class="habilidades__descripcion">Estas son algunas de mis habilidades adquiridas a lo largo de un año, desarrollando proyectos personales</p>
+        <section class="habilidades__lista lista"></section>
+    </section>
+    <section class="portafolio seccion" id="portafolio">
+        <h2 class="portafolio__titulo">Portafolio</h2>
+        <section class="portafolio__lista lista"></section>
+    </section>
+    <section class="contacto seccion" id="contacto">
+        <h2>Contactame</h2>
+    </section>
     <aside class="panel">
         <nav class="nav">
-            <a class="nav__item" href="#">
+            <a class="nav__item" href="#sobre-mi">
                 <i class="fas fa-address-card"></i>
             </a>
-            <a class="nav__item" href="#">
+            <a class="nav__item" href="#habilidades">
                 <i class="fas fa-hammer"></i>
             </a>
-            <a class="nav__item" href="#">
+            <a class="nav__item" href="#portafolio">
                 <i class="fas fa-book"></i>
             </a>
-            <a class="nav__item" href="#">
+            <a class="nav__item" href="#contacto">
                 <i class="fas fa-comments"></i>
             </a>
         </nav>
     </aside>
+
+    <template id="habilidad-template">
+        <article class="habilidad">
+            <img class="habilidad__imagen" src="" alt="">
+            <h3 class="habilidad__titulo"></h3>
+        </article>
+    </template>
+    <template id="proyecto-template">
+        <article class="proyecto">
+            <a class="proyecto__enlace" href="" target="_blank" rel="noopener">
+                <img class="proyecto__imagen" src="" alt="">
+            </a>
+            <h3 class="proyecto__titulo"></h3>
+            <p class="proyecto__descripcion"></p>
+            <section class="tags">
+                <span class="tag"></span>
+            </section>
+            <a class="proyecto__github" href="">
+                <img src="./assets/img/github.png" alt="github">
+                <p>Ver en GitHub</p>
+            </a>
+        </article>
+    </template>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

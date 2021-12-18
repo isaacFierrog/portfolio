@@ -4,6 +4,7 @@
     --color-panel: #dad6d6;
     --color-texto: #EEEEEE;
     --color-black: rgb(54, 54, 54);
+    --color-github: rgb(54, 54, 54);
 }
 
 /*Estilos glbales*/
@@ -11,6 +12,7 @@ html{
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 *,*::after,*::before{
     box-sizing: inherit;
@@ -23,6 +25,13 @@ body{
 a{
     text-decoration: none;
     color: var(--color-black);
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.seccion{
+    padding: 1rem 2rem;
 }
 
 /*Estilos header*/
@@ -37,9 +46,9 @@ a{
 
 /*Estilos panel*/
 .panel{
-    position: fixed;
+    position: sticky;
     bottom: 0;
-    left: 0;
+    z-index: 1;
     min-width: 100vw;
 }
 .nav,
@@ -57,4 +66,36 @@ a{
     align-items: center;
     width: 100%;
     padding: 2rem;
+}
+
+/*Estilos habilidades*/
+.lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.habilidad{
+    flex-basis: calc((100% / 2) - 2rem);
+    padding: 2rem;
+    text-align: center;
+}
+
+/*Estilos proyecto*/
+.proyecto__imagen{ margin-bottom: 2rem; }
+.proyecto__titulo{ margin-bottom: 1rem; }
+.proyecto__github{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 2rem;
+    background-color: var(--color-github);
+    color: var(--color-texto);
+    border-radius: 1rem;
+}
+.proyecto__github img{
+    width: 2rem;
+    margin-right: 1.5rem;
 }
