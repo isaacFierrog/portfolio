@@ -1,5 +1,5 @@
 const d = document;
-const habilidades = ["vuejs","html", "css", "javaScript", "git", "github", "bootstrap", "c", "mysql", "php", "python"];
+const habilidades = ["vuejs","html", "css", "javaScript", "git", "github", "bootstrap", "c", "mysql", "php", "python", "flask"];
 const proyectos = [
     {
         enlace: "https://naughty-bhabha-b5dd6a.netlify.app/",
@@ -10,6 +10,17 @@ const proyectos = [
         github: "https://github.com/isaacFierrog/filtroBusqueda"
     }
 ]
+
+const evaluarFormulario = () => {
+    d.addEventListener("keyup", e => {
+        const regEx = new RegExp(e.target.getAttribute("pattern"), "i");
+        
+        if(e.target.value)
+            (regEx.test(e.target.value))
+                ? e.target.classList.add("form__input--incorrecto")
+                : e.target.classList.remove("form__input--incorrecto")
+    });
+};
 
 const cargarProyectos = selecLista => {
     const $seccion = d.querySelector(selecLista),
@@ -51,4 +62,5 @@ const cargarImagenes = selecLista => {
 d.addEventListener("DOMContentLoaded", e => {
     cargarImagenes(".lista");
     cargarProyectos(".portafolio__lista");
+    evaluarFormulario();
 });

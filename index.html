@@ -15,21 +15,27 @@
         <h1 class="header__titulo">Isaac Fierro</h1>
     </header>
     <main class="main seccion" id="sobre-mi">
-        <h2>Sobre mi</h2>
+        <h2 class="main__titulo subtitulo">Sobre mi</h2>
         <p>Hola soy Isaac Fierro, un desarrollador web jr con pasion por el Frontend✨. Me encanta crear soluciones visuales, interactivas y sobre todo creativas.</p>
         <p>Me considero un eterno auto didacta, me encanta aprender nuevas cosas, entender como funcionan, y desarrollar soluciones nuevas con ellas</p>
     </main>
     <section class="habilidades seccion" id="habilidades">
-        <h2 class="habilidades__titulo">Habilidades</h2>
+        <h2 class="habilidades__titulo subtitulo">Habilidades</h2>
         <p class="habilidades__descripcion">Estas son algunas de mis habilidades adquiridas a lo largo de un año, desarrollando proyectos personales</p>
         <section class="habilidades__lista lista"></section>
     </section>
     <section class="portafolio seccion" id="portafolio">
-        <h2 class="portafolio__titulo">Portafolio</h2>
+        <h2 class="portafolio__titulo subtitulo">Portafolio</h2>
         <section class="portafolio__lista lista"></section>
     </section>
     <section class="contacto seccion" id="contacto">
-        <h2>Contactame</h2>
+        <h2 class="contacto__titulo subtitulo">Contactame</h2>
+        <form class="form" action="https://formsubmit.co/zifg_36@live.com.mx" method="POST">
+            <input class="form__input" type="text" name="asunto" placeholder="Asunto" required title="El asunto no puede exeder los 50 caracteres" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{1,50}$">
+            <input class="form__input" type="email" name="email" placeholder="Correo electronico" required title="El correo esta en un formato invalido" pattern="^[A-Za-z0-9]+(\.[A-Za-z0-9]+|-[A-Za-z0-9]+|_[A-Za-z0-9]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[A-Za-z]{2,15})$">
+            <textarea class="form__input form__text" name="mensaje" placeholder="Escribe tu mensaje" required title="El mensaje no puede exceder los 255 caracteres" pattern="^(\n|.){1,255}$"></textarea>
+            <input class="form__submit" type="submit" value="Enviar">
+        </form>
     </section>
     <aside class="panel">
         <nav class="nav">
