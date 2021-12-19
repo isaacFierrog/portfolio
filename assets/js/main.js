@@ -6,7 +6,7 @@ const proyectos = [
         titulo: "Buscador de usuarios",
         imagen: "buscador",
         descripcion: "Este proyecto consiste en el consumo de una API de usuarios que pintamos en el DOM, ademas podemos filtrar los usuarios en funcion de su nombre",
-        tags: ["html", "css", "javascript"],
+        tags: ["html", "css", "javascript", "flask", "webpack", "npm"],
         github: "https://github.com/isaacFierrog/filtroBusqueda"
     }
 ]
@@ -25,7 +25,8 @@ const evaluarFormulario = () => {
 const cargarProyectos = selecLista => {
     const $seccion = d.querySelector(selecLista),
         $template = d.getElementById("proyecto-template").content,
-        $fragment = d.createDocumentFragment();
+        $fragment = d.createDocumentFragment(),
+        $fragmentTags = d.createDocumentFragment();
 
     proyectos.forEach(proyecto => {
         $template.querySelector(".proyecto__enlace").setAttribute("href", proyecto.enlace);
@@ -34,6 +35,16 @@ const cargarProyectos = selecLista => {
         $template.querySelector(".proyecto__imagen").setAttribute("alt", proyecto.imagen);
         $template.querySelector(".proyecto__descripcion").textContent = proyecto.descripcion;
         $template.querySelector(".proyecto__github").setAttribute("href", proyecto.github);
+        
+        for(let i = 0;i < proyecto.tags.length; i++){
+            const $tag = d.createElement("span");
+            $tag.classList.add("tag");
+            $tag.textContent = proyecto.tags[i];
+            $fragmentTags.appendChild($tag);
+        }   
+
+        $template.querySelector(".tags").appendChild($fragmentTags);
+
         const $clone = d.importNode($template, true);
         $fragment.appendChild($clone);
     });

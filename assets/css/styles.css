@@ -5,6 +5,7 @@
     --color-texto: #EEEEEE;
     --color-black: rgb(54, 54, 54);
     --color-github: rgb(54, 54, 54);
+    --color-tag: #368B85;
 }
 
 /*Estilos glbales*/
@@ -76,7 +77,7 @@ img{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 .habilidad{
     flex-basis: calc((100% / 2) - 2rem);
@@ -85,6 +86,14 @@ img{
 }
 
 /*Estilos proyecto*/
+.proyecto{
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+.proyecto__info{
+    padding: 0 1.5rem;
+    padding-bottom: 2rem;
+}
 .proyecto__imagen{ margin-bottom: 2rem; }
 .proyecto__titulo{ margin-bottom: 1rem; }
 .proyecto__github{
@@ -101,6 +110,24 @@ img{
 .proyecto__github img{
     width: 2rem;
     margin-right: 1.5rem;
+}
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+.tag{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    background-color: var(--color-tag);
+    border-radius: 1rem;
 }
 
 /*Estilos form*/
